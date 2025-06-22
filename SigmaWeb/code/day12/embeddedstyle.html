@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded style sheet</title>
+    <style>
+/*  here the style sheet use several types of selector to select all element with a particular tag we can use tag name */
+div { 
+    /* this style will only apply to all div tags in this entire html webpage */
+    background-color: lightblue;
+}
+span {
+    background-color: lightgreen;
+}
+#d1 {
+    /* this style will only apply to the div with id d1 */
+    color: rosybrown;
+}
+#d2 {
+    /* this style will only apply to the div with id d1 */
+    color: grey;
+}
+
+.spans {
+    /* this style will only apply to all span tags with class spans */
+    color: darkblue;
+}
+    </style>
+</head>
+<body>
+    <!-- the CSS can be use by creating a style sheet in side the head tag using a style tag and selectors -->
+     <div id = "d1"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo obcaecati tempora reiciendis! Commodi unde, rerum quia nisi minus enim eligendi debitis, vel neque, doloremque perferendis laborum provident accusantium culpa!
+     </div>
+     <div id = "d2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, dicta!
+     </div>
+     <span  class ="spans" id = "s1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita quibusdam totam nostrum tenetur nam dolorem illo eveniet beatae dicta repellat aliquid </span>
+     <span class = "spans"id = "s2">Lorem, ipsum. </span>
+     <span class="spans"id = "s3">Lorem ipsum . Expedita quibusdam totam nostrum tenetur nam dolorem illo eveniet beatae dicta repellat aliquid </span>
+</body>
+</html>

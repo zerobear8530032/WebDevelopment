@@ -1,0 +1,119 @@
+<!-- CSS selectors -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors </title>
+    <style>
+        /* class selectors */
+        .LightBlue{
+            background-color: lightblue;
+        }       
+        .pink{
+            background-color: #FFCCBB;
+        }       
+        .LigthGrey{
+            background-color: lightgrey;
+        }     
+    
+        /* this is a Element Select this works on every single div  */
+        div{
+        color: gray;
+    }
+    /* id selector */
+    #lightgreen{
+        background-color: lightgreen;
+    }     
+
+     /*child selector: only work with dirrect child means if there a more nested tag btw main parent and child it wont apply */
+    div>p{
+        color: lightcoral;
+        background-color: lightpink;
+    }     
+     /*Desendant  selector this will be apply to any level of nested tags present in the divv*/
+    div p{
+        color: light;
+        background-color: lightpink;
+    }     
+
+    /* universal selector */
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+    }
+
+    /* pseudo Selector: these are selector which act on certain events on element */
+    div:hover{
+        background-color: #000000;
+        cursor: pointer;
+    }
+
+    a:visited{
+        color: yellow;
+    }
+
+    a:link{
+        color: green;
+    }
+
+    a:active{
+        background-color: red;   
+    }
+
+/* this work where in side the any parent tag  p is the first child  */
+    p:first-child{
+        background-color: pink;   
+    }
+
+   
+
+
+    </style>
+ </head>
+ <body>
+    <div class="LightBlue" > this is a Light blue div 
+        <p> this is a child element of div </p>
+    </div>
+    <div class="pink"> this is a pink div 
+        <p> this is a child element of div </p>
+    </div>
+    <div class= "LightGreen"id="lightgreen"> 
+        this is a pink div 
+        <p> this is a child element of div </p>
+    </div>
+    <div class= "LigthGrey" id="lightgrey"> 
+        this is a light grey div 
+        <p> this is a child element of div </p>
+    </div>
+    <div class= "LigthGrey" id="lightgrey"> 
+        this is a light grey div
+        <article>
+            <p> this is a child element article which is a child of div </p>
+        </article> 
+    </div>
+    <a href="https://www.google.com/"> this is dummy link </a>
+    <article> 
+        <p>
+            this is a article child
+        </p>
+        </article>
+    <span> 
+        <p>
+            this is a span child
+        </p>
+    </span>
+    <span> 
+        <span>
+            this is a child of child span
+        </span>
+    </span>
+    <div> 
+        <p>
+            this is a child of div 
+        </p>
+    </div>
+ </body>
+ </html>

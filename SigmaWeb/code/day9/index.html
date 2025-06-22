@@ -1,0 +1,48 @@
+<!-- today we will learn about media tags like audio video component to add in the webpages  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media tags IN HTML</title>
+</head>
+<body>
+    
+
+    <video src="/day9/videos/vid.mp4"  poster="/day9/img/img.jpg" width="500"  muted loop controls autoplay></video>
+    <!-- !-- the video tag is used to add video in the webpage and it have many attributes like src which is used to give the path of the video file
+    poster is used to give the image which will be shown before the video is played and width    -->
+
+<!-- 
+    🎥 <video> Tag – Common Attributes
+Attribute	Description
+src	Path to the video file (e.g., .mp4, .webm, etc.)
+controls	Displays the browser’s built-in playback controls (play, pause, volume, etc.)
+autoplay	Starts playing the video automatically when the page loads (often requires muted)
+muted	Mutes the audio; required for autoplay to work in most browsers
+loop	Repeats the video automatically after it ends
+poster	An image that shows before the video starts (like a thumbnail or preview image)
+width / height	Sets the size of the video player (you can use just width, and height auto-scales)
+preload	Tells the browser how much of the video to load when the page loads
+
+🔍 What is preload?
+The preload attribute gives a hint to the browser about whether the video should be loaded immediately when the page loads:
+
+Value	Meaning
+auto	Browser decides how much to load (default; usually starts loading metadata and some data)
+metadata	Only loads video metadata (like duration, dimensions, etc.), not the video content
+none	Browser shouldn't load anything until the user clicks "play"
+
+🧠 Use Cases:
+preload="none" if you want to save bandwidth (e.g., on mobile).
+
+preload="metadata" if you just need duration, size, etc.
+
+preload="auto" if you want the video to start faster when played. -->
+<!-- iframe allows us to embedd a webpage or a video in out web page  -->
+<iframe width="882" height="496" src="https://www.youtube.com/embed/XZwBNDGuWGU" title="Video, Audio &amp; Media in HTML | Sigma Web Development Course - Tutorial #10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- quick quiz -->
+     <!--create a website  which can show videos of different website and some songs also played-->
+
+</body>
+</html> 

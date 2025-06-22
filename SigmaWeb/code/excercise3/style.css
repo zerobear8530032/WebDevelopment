@@ -1,0 +1,10 @@
+/* first child will make the divsfirst child paragraph only affect with this selector */
+div :first-child{
+    background-color: yellow;
+    color:red;
+}
+div p{
+    /* this will effect the rest of the paragraphs  */
+    background-color: blue;
+    color:white;    
+}

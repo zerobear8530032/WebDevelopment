@@ -1,0 +1,92 @@
+<!-- CSS sizing UNITS : -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIZE units in css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        box-sizing: border-box;
+        border: 2px solid red;
+        background-color: lightblue;
+        width: 50vw;
+        margin: auto; /* this will make the box take 50% of the viewport width and align to center but only works for block element no inline */
+      }
+
+      .container {
+        width: 50vw;
+        margin: 20px auto; /* this will set top margin 20px and rest to auto */
+        min-height: 80vh; /* this will set the minimum height to 80% of the viewport height */
+        height: 10vh; /* this will set the height to 10% of the viewport height */
+        background-color: lightgreen;
+        font-size: 16px; /* this will set the font size to 16px */
+        overflow: scroll; /* this will add a scroll bar if the content is larger then the container */
+      }
+      .container p {
+        /* em is the unit that inherit the font size form parent component and multiply it with unit means if the parent component is 16 font size then the p will  have 1em then p font size = 1*16 px if the container is 16 px and p is 2 then 16*2=32 */
+        width: 100%; /* this will make the width of the p to be 100% of the parent container */
+        font-size: 2em;
+      }
+
+      html {
+        font-size: 12px; /* this will set the root element font size to 32px */
+      }
+      .roote {
+        font-size: 20px;
+      }
+      .roote p {
+        font-size: 2rem; /* rem is the unit that inherit the font size from the root element and multiply it with unit means if the root element is 32 font size then the p will have 1rem then p font size = 1*16 px if the root is 32 px and p is 2 then 32*2=64 */
+      }
+
+      .mycont {
+        box-sizing: border-box;
+        background-color: palevioletred;
+        color: wheat;
+        font-size: 20px;
+        border: 2px solid yellow;
+        width: 50vmin; /* vmin is the unit that takes the minimum of viewport width and height so if the viewport width is 1000px and height is 500px then 50vmin will be 250px */
+        height: 50vmax; /* this will set the height to 50% of the max of the viewport width and height */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- in css there are several units we can use to give a size of elements  -->
+    <div class="box">
+      this is a box
+      <!-- px : 1/96 of inch and these are not responsive   -->
+      <!-- vw: its is given as % 100 means full and above that means more then full this is a view port width this make the size to be according to what size the user screen is it given in % and adjust automatically  -->
+      <!-- em: this allow us to set the inherited size and scale it by  given value if its 1 then inherited * 1 if 2em then inherited*2 = new  size  -->
+      <!-- rem: this is similar to em but it takes inherited size from the root and scale it to get new size   -->
+      <!-- vmin : this take the min of height and width of the viw port and apply it on what x is given -->
+      <!-- vmax : this take the max of height and width of the viw port and apply it on what x is given -->
+      <!-- % : tthis apply the % of parent component size -->
+    </div>
+    <div class="container">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quisquam
+        placeat ratione minima reprehenderit labore saepe, veniam voluptatem,
+        commodi nesciunt velit. Voluptatum aspernatur ad neque. Obcaecati ex
+        blanditiis sed delectus mollitia. Quam, non.
+      </p>
+    </div>
+    <span class="box"
+      ><!-- this does not allow th e vw width to be applied   -->
+      this is a span box
+    </span>
+
+    <div class="roote">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, enim
+        delectus? Sapiente, placeat.
+      </p>
+    </div>
+    <div class="mycont">this is an another div</div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What are float and clear</title>
+    <style>
+        img{
+            /* float allow us to display a image in a section like an article  */
+            float:right;
+        }
+        .cards{
+            display: flow-root;
+            border:2px solid palegreen
+        }
+        .card{
+            border:2px solid rgb(0, 0, 0)
+        }
+        .card:nth-child(3){
+            background-color: blue;
+            /* this allow us to remove the float image from a particular element  */
+            clear:both;
+
+        }
+
+    </style>
+  </head>
+  <body>
+    
+    <div class="cards">
+      <img src="image/background.jpg" alt="background image" width="300" >
+      <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugit hic enim? Praesentium inventore voluptatum ab magni necessitatibus animi debitis, laudantium beatae sapiente.</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .box {
+        border:2px solid red;
+        background-color: lightblue;
+        /* inline property does not allow the top padding and margin and width to be set so we can use inline block for that  */
+        display:inline-block;/* with inline we can make a block element inline element  */
+        padding:50px;
+        margin:50px;
+        width: 24vw; /* this will set the width to 50% of the viewport width */
+      }
+      .spans{
+        border:2px solid red;
+        background-color: lightblue;
+        /* inline property does not allow the top padding and margin and width to be set so we can use inline block for that  */
+        display:inline;
+        padding:50px;
+        margin:50px;
+        width: 50vw; /* this will set the width to 50% of the viewport width */
+
+      }
+
+      .box1{
+        /* display:none;   /*thismake the element not to be displayed at all */
+        /* visibility:hidden;  this will hide the element but it will take the space in the layout */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- display property is use to change the inline block to block elements and many more  -->
+    <!-- the inline elements does not apply the top margin and padding and they does not set the width property of elements also -->
+     <!-- so we can use inline-block to set the these property -->
+    <div class="box box1">i am a box</div>
+
+    <span class ="spans">
+        i am  good
+    </span>
+    <span class="spans">boy</span>
+  </body>
+</html>

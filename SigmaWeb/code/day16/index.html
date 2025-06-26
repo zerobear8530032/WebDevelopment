@@ -1,0 +1,114 @@
+<!-- we will learn how the multiple css apply to same object with different property apply at the same time and which is chooses if there are multiple  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .yellow {
+            color: yellow;
+        }
+        .purple{
+            color: purple;
+        }
+        .red {
+            color: red;
+        }
+        h1{
+            color:aqua;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }   
+
+
+        p {
+            color:gray !important;/* this is the way to override inline css   */
+            font-size: 20px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<!-- in html the The Cascade Algorithm
+CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+
+Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+Position and order of appearance: the order in which your CSS rules appear
+Specificity: an algorithm that determines which CSS selector has the strongest match
+Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type -->
+
+<!-- so if there are multiple selector which have same specificity like all selector are class selector then the style applied is determine by the order of the 
+ css the style which is at the last will be apply 
+
+ when there are different specificity like class selector and id then the one with higher specificity will be applied 
+ 
+ -->
+
+<h1 class="red purple yellow">CSS Specificity</h1>
+
+<table>
+
+    <thead>Specificity table </thead>
+    <tr>
+        <th>selector</th>
+        <th>Specificity</th>
+    </tr>
+    <tr>
+        <td>Universal</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>element</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>psedo class </td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>attribute </td>
+        <td>10</td>
+    </tr>
+   
+    <tr>
+        <td>id </td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>inline </td>
+        <td>1000</td>
+    </tr>
+    <!-- this is the only way to override the inline style -->
+    <tr>
+        <td>important </td>
+        <td>10000</td>
+    </tr>    
+
+    
+</table>
+<p style="color:rebeccapurple"> a.harryclass.rohan-class[href]:hover {
+color: red;
+}
+<br>
+specificity = 10 + 10 + 10 +10+ 1 = 41
+a:1 + harryclass:10 + rohan-class:10 + [href]:10 + :hover:10 = 41
+</p>
+</body>
+</html>

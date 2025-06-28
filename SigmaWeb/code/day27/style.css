@@ -1,0 +1,65 @@
+.container{
+    border:2px solid red;
+    /* this allow us to use flex box property in items  */
+    display:flex;
+    height: 80vh;
+/* justify-content :center make the content  center  according to the main direction*/
+/* left makes the things go to left */
+/* right makes the things go to right */
+/* end makes the things go to end */
+/* space-around create a space  around each block on every side to cover entire width */
+/* space-evenly create a evenly space each block to cover entire width */
+/* space-between create a space between each block to cover entire width */
+    justify-content: center;
+    
+    /* align-items :center make the content vertically center */
+    /* all above property can be used to align stuff cross axis of the flex direction  using align-item */
+    align-items: center;
+    /* this allow us to change direction of the flex box  */
+    /* by default its left to right  */
+    flex-direction: row;
+    /* this wrap the content if the data over flow  */
+    /* flex-wrap: wrap; */
+    /* when we work with multiple data in flex we use align content to apply to all the data  */
+    align-content: center;
+/* this allow to chnage flow of flex */
+    /* flex-flow: row wrap; */
+    /* row-gap:40px;
+    column-gap:40px; */
+    /* or we can do */
+    gap:40px 40px;
+}
+
+.item{
+    height:20px;
+    width:20px;
+    order:100;
+    background-color: chocolate;
+    border:2px solid salmon;
+    
+}
+/* flex box item property */
+/* by default order value is 0  */
+.order-1{
+    /* flex grow allow an item to take x time more space then other items */
+    flex-grow: 5;
+    order:23;
+
+}
+.order-2{
+    /* flex shrink shrink them selves if requrired */
+    order:2;
+
+}
+
+.item1{
+    flex-shrink: 2;
+    /* align self make the item align it self rather then follow flex order */
+    align-self: flex-end;
+    
+}
+
+.order-3{
+    order:3;
+
+}

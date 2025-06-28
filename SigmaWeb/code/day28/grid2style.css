@@ -1,0 +1,40 @@
+.container{
+    border:2px solid sandybrown;
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                         "side article article" 
+                         "footer footer footer"  ;
+                          gap:25px;
+   
+}
+
+.item{
+    border:2px solid blue;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.item-1{
+    grid-area: nav;
+    background-color: burlywood;
+}
+.item-2{
+    grid-area: side;
+    background-color: lightslategray;
+}
+.item-3{
+    background-color: violet;
+    grid-area: article;
+}
+.item-4{
+    background-color: tomato;
+    grid-area: footer;
+}
+.item-5{
+    background-color: thistle;
+    grid-area: nav;
+  
+}
+
+
+

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+.nav-items {
+  list-style-position: inside;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item select {
+  padding: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+  color: black;
+}
+.item button {
+  padding: 5px;
+  margin: 20px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Arial, Helvetica, sans-serif;
+  border: 5px solid rgba(0, 0, 0, 1);
+  background-color: whitesmoke;
+  width: 110px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+.item img {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.item i {
+  font-size: 20px;
+  margin: 5px;
+  display: inline-block;
+  margin-top: 30px;
+}
+.item p {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-right: 10px;
+}
+
+.english-icon {
+  width: 75px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.english-icon i {
+  margin: 0 5px 0 0;
+  font-size: 18px;
+}
+.english-icon p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.item select:hover,
+.item p:hover,
+.item i:hover,
+.item button:hover {
+  color: gray;
+}
+.nav-container{
+    margin-bottom: 100px;
+    height:20vh;
+}
+
+.information {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+.information h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.information h1 b {
+  margin-top: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading {
+
+  display: flex;
+  gap:20px;
+}
+.heading img {
+  height: 30px;
+  width: 100px;
+  align-self: center;
+}
+
+
+.information h3{
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+  text-align: center;
+  color:#222;
+  width:70vw;
+  word-spacing: 1vw;
+}
+.information button{
+    margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #00b6d1;
+  color: white;
+
+  padding: 10px;
+}
+.information i{
+    margin-right: 5px;
+}

@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  background-color: black;
+}
+
+.main-container {
+  background-image: url("images/backgroud.png");
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.btn-lang {
+  display: flex;              /* Flex makes content line up horizontally */
+  align-items: center;        /* Vertically centers icon and text */
+  gap: 6px;                   /* Optional: adds space between text and icon */
+  background-color: transparent; /* Optional styling */
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px ;
+  border:1px solid grey ;
+}
+.btn-lang img{
+  height: 25px;
+  width: 25px;
+
+}
+
+
+.main-container .box {
+  background-color: rgba(0, 0, 0, 0.8); /* Only background is transparent */
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+}
+
+.main-container nav {
+  padding: 25px;
+}
+
+nav {
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+nav img {
+  width: 10em;
+}
+
+.flex {
+  display: flex;
+}
+
+.hero {
+  height: 100%;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  min-width: 50%;
+  color: white;
+}
+
+.hero .heading {
+  font-weight: 900;
+  font-size: 3.5em;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu",
+    "sans-serif";
+  padding: 25px;
+  width: 50%;
+}
+
+.hero .price {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 2px;
+  width: 100%;
+}
+.box input {
+  padding: 10px;
+  width: 100%;
+  background-color: rgba(23, 23, 23, 0.23);
+}
+.red-btn {
+  background-color: rgba(225, 0, 0, 1);
+}
+.hero .message {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.email-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 40vw;
+  z-index: 10;
+}
+
+.email-container input,
+.email-container button {
+  box-sizing: border-box;
+  height: 70%;
+  font-size: 24px;
+  font-weight: bold;
+}
+.email-container input {
+  width: 60%;
+}
+.email-container button {
+  width: 40%;
+}
+
+#curve {
+  object-fit: cover;
+  width: 100%;
+  height: 60px;
+}
+
+.content-container {
+  width: 100vw;
+  background-color: black;
+}
+
+.content-container {
+  color: white;
+}
+
+.content {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-seri;
+  font-size: 1em;
+  width: 90vw;
+  gap:25px;
+  overflow: auto;
+}
+.bottom-panel {
+  margin-top: 5vh;
+}
+.cards-container {
+  /* gap: 40px; */
+  align-items: center;
+  height: 50vh;
+  gap:25px;
+  padding-left: 25px;
+  position:relative;
+}
+.card {
+  border-radius: 10px;
+  position: relative;
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+@keyframes scalehovercard {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.card img:hover {
+  animation: scalehovercard normal 1s forwards;
+}
+
+.card p {
+  font-size: 15vh;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 2px white;
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+}
+
+.card-info {
+  position:relative;
+  background: linear-gradient(160deg, #0d0d1f 0%, #1f0d2b 60%, #2a1033 100%);
+  margin-top: 0.5em;
+  height: 95%;
+  width: 100%;
+
+}
+
+.card-info p {
+  font-size: 16px;
+  position: static;
+  -webkit-text-stroke: black;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+}
+.card-info h2 {
+  font-size: 24px;
+  padding: 5px 10px;
+}
+.cards-container-info{
+  height:40vh;
+  max-height: 40vh;
+  gap:25px;
+}
+.bottom-panel .cards-container-info {
+  padding: 0px;
+}
+
+.bottom-panel .cards-container-info h2 {
+
+  margin-bottom: 20px;
+}
+
+.bottom-panel .cards-container-info img {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+.question-container{
+  flex-direction: column;  
+  gap:5px;
+  height:100%;
+}
+
+
+.question{
+  position:relative;
+  margin-top:5px;
+  background-color:rgb(45, 45, 45)
+}
+
+.question p{
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-seri;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 16px 32px
+}
+
+#question{
+  height:80vh;
+}
+
+
+.question img{
+ position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+}
+
+.cards-conatiner-info{
+  height: 45vh;
+    gap: 20px;
+}
+
+.question:hover{
+  background-color: #444444;
+  
+}
+
+.before-footer{
+  color: white;
+  text-align: center;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-seri;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:25px;
+  flex-direction: column;
+}
+.before-footer p{
+  font-size:16px;
+  color:darkgray;
+  
+}
+
+
+
+footer{
+  position:relative;
+  z-index:10;
+}
+
+footer p{
+  text-decoration: underline;
+  padding:25px;
+}
+footer p , footer div{
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu",
+    "sans-serif";
+      margin-bottom:10px;
+  color:darkgray;
+
+}
+
+footer ul{
+  list-style-position: inside;
+  list-style-type: none;
+}
+footer ul li{
+  display: inline-block;
+}
+
+footer{
+    margin-left: 5vw;
+    margin-right: 5vw;
+  padding:10px;
+}
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  padding: 20px;
+  background: black;
+}
+
+.footer-item {
+  background: black;
+  
+  color: white;
+  padding: 10px;
+}
+
+.footer-item a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-item button{
+  width:120px;
+}
+
+#original{
+  color:blue;
+}

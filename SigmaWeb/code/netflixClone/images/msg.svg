@@ -1,0 +1,39 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="grad1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#99421D" />
+      <stop offset="33%" stop-color="#99161D" />
+      <stop offset="66%" stop-color="#7D1845" />
+      <stop offset="100%" stop-color="#59216E" />
+    </radialGradient>
+    <radialGradient id="grad2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFDCCC" />
+      <stop offset="33%" stop-color="#FFBDC0" />
+      <stop offset="66%" stop-color="#F89DC6" />
+      <stop offset="100%" stop-color="#E4A1FA" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer rounded square -->
+  <rect x="10.8" y="10.8" width="34.8" height="34.8" rx="4.8" fill="url(#grad1)" />
+  
+  <!-- Inner square -->
+  <rect x="9.6" y="9.6" width="34.8" height="34.8" rx="4.8" fill="url(#grad2)" />
+  
+  <!-- Eyes (top block) -->
+  <circle cx="16.5" cy="21.9" r="2.1" fill="url(#grad1)" />
+  <circle cx="37.5" cy="21.9" r="2.1" fill="url(#grad1)" />
+
+  <!-- Mouth (top block) - shifted slightly left -->
+  <path d="M21 29.6c1.5 1 4.5 2.2 7.6 2.2s6.1-1.2 7.6-2.2" stroke="url(#grad1)" stroke-width="1.5" fill="none" />
+
+  <!-- Bottom block -->
+  <rect x="27.6" y="27.6" width="34.8" height="34.8" rx="4.8" fill="url(#grad1)" />
+  
+  <!-- Eyes (bottom block) -->
+  <circle cx="34.5" cy="39.9" r="2.1" fill="url(#grad2)" />
+  <circle cx="55.5" cy="39.9" r="2.1" fill="url(#grad2)" />
+
+  <!-- Mouth (bottom block) - shifted slightly left -->
+  <path d="M39.8 47.6c1.5 1 4.5 2.2 6.9 2.2s5.4-1.2 6.9-2.2" stroke="url(#grad1)" stroke-width="1.5" fill="none" />
+</svg>

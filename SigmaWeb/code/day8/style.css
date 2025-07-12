@@ -1,0 +1,19 @@
+/* here we can use . to select a class and apply css to every class element */
+.div{
+    background-color: rgb(85, 0, 0);
+}
+
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}
+
+/* # can be use to target element by id and apply css to it  */
+#d1{
+font-size: 20px;
+}
+#d2{
+font-size: 50px;
+}

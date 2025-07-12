@@ -1,0 +1,29 @@
+.container{
+    height: 50vh;
+    width:50vw;
+    background-color: aqua;
+    border: 2px solid black;
+    background-image: url("image/image.png");
+    background-position:10px 10px ;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size:cover ;
+
+
+}
+
+img{
+    height: 50vh;
+    width: 50vw;
+    /* this makes the object to cover the given height and width of it self without disturbing the aspect ratio */
+    object-fit: cover;
+    /* this allow us to show the whole object but the image might not cover whole container  */
+    /* object-fit :contain; */
+    /* it is the by default property which change the height and width according to object but this might distord the aspect ratio */
+    /* object-fit :fill; */
+    /* to fit the object we need to some time crop the image now we can control where to cut using this property  */
+    /* object-position: left; */
+    object-position: left;
+
+}

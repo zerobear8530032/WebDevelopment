@@ -1,0 +1,58 @@
+<!-- forms are used to take a certain type of data as input from user like text , number etc login info-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form action="POST"><!-- form tag is use to create a form  action attribute tell what action to perform once form submit-->
+        <!-- input tag is used to take different types of input from user by default its takes text but we can change its types using type attribute -->
+        <h1> User Detail Form </h1>
+        <div>
+             <label for="username">Username:</label><!-- label tag is used to create a label for the input field , for attribute is used to link the label with input field -->
+             <input type="text" id ="username" name="username" placeholder="Enter your username"><!-- input tag with type text to take username input from user  , placeholder : show a hint of what it takes , required make the form to force user to fill this field , name is use to name the input element-->
+        </div>
+        <div>
+
+             <label for="male">Male</label> 
+             <!-- a radio button is used to select one option from a group of options , name attribute is used to group the radio buttons together so that only one can be selected at a time  we give same name to multiple radio button allow us to select one at a time -->
+             <input type="radio" id ="male" name="male" >
+             <label for="female">Female</label>
+             <input type="radio" id ="female" name="male" > 
+        </div>
+        <div>
+            <h2> choose your programming language</h2>
+            <!-- checkbox is used to select multiple options from a group of options , name attribute is used to group the checkboxes together so that multiple can be selected at a time -->
+            <label for="java">java</label> 
+            <input type="checkbox" name="language" id="java">
+            <label for="python">python</label> 
+            <input type="checkbox" name="language" id="python">
+            <label for="C++">C++</label> 
+            <input type="checkbox" name="language" id="C++">
+            <label for="C">C</label> 
+            <input type="checkbox" name="language" id="C">
+        </div>
+        <div>
+            <label for="comments">Comments</label> 
+             <!-- textarea allow us to take a large text from user like a comment or issue etc  -->
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here">
+        </textarea>
+        </div>
+        <div>
+            <h2>choose your profile</h2>
+            <!-- select tag is used to create a dropdown list , option tag is used to create options in the dropdown list -->
+            <label for="profile">Profile:</label>
+            <select id="profile" name="profile">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+            </select>
+        </div>
+
+    </form>
+    
+</body>
+</html>

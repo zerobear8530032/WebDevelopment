@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        .boxes{
+            background-color: cadetblue;
+        }
+        .box:first-child{
+            background-color: aqua;
+        }
+        /* this selects the first line of the box class*/
+        .box::first-line{
+            color:chocolate;
+        }
+
+        /* select all elements inside the boxes  */
+        .boxes *{
+            border:5px solid red;
+        }
+
+        /* here is the attribute selector  */
+        /* .box, [data-color="primary"]{
+            margin-top: 100px;
+            padding:50px;
+        } */
+        /* lol class selector */
+        /* [class="box"]{
+            font-size:23px;
+        } */
+
+        .box:nth-child(even){
+            background-color: blue;
+        }
+        .box::before{
+            content:"starting of the box ";
+        }
+        .box::after{
+            content:"ending of the box ";
+        }
+
+        .box::selection{
+            color:darkseagreen;
+            background-color: black;
+        }
+        .box::first-letter{
+            font-size: 34px;
+        }
+
+        input::placeholder{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am a box </div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+    </div>
+    <input type="text" placeholder="hello enter some thing here">
+</body>
+</html>

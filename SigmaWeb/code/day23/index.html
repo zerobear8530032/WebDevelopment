@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+    <style>
+/*  css varaibles can be created using the  :root{} */
+:root{
+    --color: rgba(12,243,0,1);
+    --seccolor: rgba(12,54,54,1);
+    /*  */
+    --display:flex;
+    --defop:0.5;
+}
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       .nav{
+            background-color: var(--color);
+        }
+        .container{
+        /* if  the variable is not found we can put the color  */
+            background-color: var(--backcolor,blanchedalmond);
+        }
+        .list{
+            opacity:var(--defop,0.4);
+            display: var(--display);
+        }
+        .item{
+            --color: rgb(18, 218, 218);
+            margin:5px;
+            padding: 5px;
+            background-color: var(--color);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- varibles in css -->
+
+    <div> 
+        <nav class="nav">
+            <ul class="list">
+                <li class="item">Home</li>
+                <li class="item">about</li>
+                <li class="item">contact</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non deserunt quibusdam ullam officiis commodi voluptate placeat sint sit odit culpa, eum aspernatur, iure, nostrum praesentium quidem illum fugiat itaque exercitationem perspiciatis explicabo tempore voluptatem. Magni, ab dolorum officiis esse iste ullam quam illo!
+
+    </div>
+    
+</body>
+</html>

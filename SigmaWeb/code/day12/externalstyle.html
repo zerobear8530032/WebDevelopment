@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- in external style sheet we uses a seperate CSS file which we created using .css extension and connet it with link tag to apply css -->
+     <!-- this is the most widely use css as it provide flexibility and we can use multiple css file at a time  -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<!-- when we work with multiple CSS at the same time the most priority given to is inline CSS and then embedded an at last external CSS -->
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis adipisci quos porro, delectus ex aperiam, fugit voluptatum quibusdam culpa animi aspernatur excepturi libero. Voluptates atque libero eos consectetur, consequuntur culpa?
+    </p>
+    <ul>
+        <li style="background-color: aqua;" id="Inline">inline CSS</li>
+        <li id ="Embedded">embedded CSS</li>
+        <li id ="External">External CSS</li>
+    </ul>
+    
+</body>
+</html>

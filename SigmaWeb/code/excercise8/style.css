@@ -1,0 +1,42 @@
+.box {
+  height: 121px;
+  width: 121px;
+  background-color: red;
+  border-radius: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* animation:  horizontal 5s ease-in-out 1s infinite; */
+  /* animation: vertical 5s ease-in-out 1s infinite;  */
+  animation: combined 5s linear 1s infinite;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+
+@keyframes combined {
+  0% {
+    transform: translate(0vw, -80vh);
+  }
+  20% {
+    transform: translate(20vw, 0vh);
+  }
+  40% {
+    transform: translate(40vw, -60vh);
+  }
+  60% {
+    transform: translate(60vw, 0vh);
+  }
+  80% {
+    transform: translate(80vw, -40vh);
+  }
+  100% {
+    transform: translate(80vw, 0vh);
+  }
+}

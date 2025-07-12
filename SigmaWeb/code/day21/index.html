@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow property</title>
+    <style>
+        .box{
+            width:40vw;
+            height:40vh;
+            border: 2px solid black;
+            /* overflow: hidden;/* this will hide the content that overflows the box */
+            /* overflow:scroll; /*this will add a scrollbar to the box if the content overflows */
+            /* overflow-x: scroll;/* this will add a scrollbar to the box if the content overflows horizontally */
+            overflow: auto; /* this will add a scrollbar to the box if the content overflows vertically or horizontally */;
+            /* white-space: nowrap;this will make the text not wrap to the next line */
+            white-space: normal; /* this will make the text wrap to the next line
+            /* overflow:elipse ; this will add an ellipsis to the text if it overflows the box */
+            /* text-overflow: ellipsis; this will add an ellipsis to the text if it overflows the box */
+
+            /*overflow : hidden auto /* this will hide the content that overflows the box vertically and add a scrollbar if it overflows horizontally */
+
+            overflow : auto;/* this will add a scrollbar to the box if the content overflows vertically or horizontally */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto modi, dignissimos soluta at facere placeat laudantium eveniet ea amet culpa deleniti architecto asperiores? orrxgUhPkZpkTtTu2oNlf1eCMkJkUxTuTBICJTFKocuI78PNOUhmW4QeBV2oeqTuPgqtoHWKMT Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus velit pariatur dolores hic debitis molestiae, voluptates suscipit, quas omnis est minus dicta eveniet sint eum animi. Dignissimos, velit neque assumenda rem saepe doloribus impedit.
+    </div>
+</body>
+</html>

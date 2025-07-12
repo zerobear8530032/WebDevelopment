@@ -1,0 +1,34 @@
+.container{
+    height :100vh;
+    height :100vw;
+    background-color:lightcoral;
+    border:2px solid black;
+
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background-color:lightpink;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition property have 4 parts  */
+    /* here in transition we specitfy property in which it apply */
+    /* we can use transition on mutltiple property at once  */
+    /* transition-property: background-color , transform; */
+    /* in  duration we specify how much time this transition will go on */
+    /* transition-duration: 3s; */
+    /* this specify transitio timing */
+    /* transition-timing-function:ease-in-out ; */
+    /* transitiondelay specfy when delay when it start  */
+    /* transition-delay: 1s; */
+    /* short hand for transition */
+    transition : transform 3s cubic-bezier(0, 3.74, 1,-2.14) 1s;
+}
+
+.translate{
+    transform: translateX(10vw) translateY(10vh) scale(2);
+    background-color: black;
+}

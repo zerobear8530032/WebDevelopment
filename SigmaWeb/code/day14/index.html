@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODEL IN CSS </title>
+    <style>
+        *{
+            margin:0;
+            padding:0;        
+        }
+
+        .box{
+            background-color: lightgreen;     
+            
+        }
+
+        .box1{
+            padding:10px;
+            margin: 25px;
+            color:yellow;
+            border: 5px solid yellowgreen;
+            /* height of the element is the  height of the content of element */
+            /* Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+               Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin */
+            height:100px; 
+            /* if we use this CSS property callled boxsizing : borderbox*/
+            /* this will make the total height of which will includ updown border and padding not including margin */
+            box-sizing: border-box;
+        }
+        .box2{
+            padding:10px;
+            margin: 25px;
+            color:blue;
+            border: 5px solid black;
+            /* height of the element is the  height of the content of element */
+            /* Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+               Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin */
+            height:100px; 
+            /* if we use this CSS property callled boxsizing : borderbox*/
+            /* this will make the total height of which will includ updown border and padding not including margin */
+            box-sizing: border-box;
+            /* margin collapse : is a thing happen when to vertical element having margin then their margin instead of adding the max one is applied btw them  */
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- CSS box model is the model which is use to format the tags in HTML each element are consider a box  -->
+     <div class="box box1"> I am BOX 1 </div>
+     <div class="box box2"> I am BOX 2</div>
+    
+</body>
+</html>

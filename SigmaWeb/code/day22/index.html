@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position property</title>
+    <style>
+         *{
+        margin:0p;
+        padding:0;
+        }
+
+
+    .box{
+        width: 20vw;
+        height: 20vh;
+        margin: 5px;
+        padding: 5px;
+        border: 2px solid black;
+        font-size: 50px;
+        /* position:static;/* Default position */
+        /* when the position is static we cannot apply different top left right or z index to the element  */
+        
+        
+    }
+    
+    .box1{
+        background-color: darkkhaki;
+        position:sticky;/* This will make the box1 stick to the top of the viewport when scrolling */
+        top:10px;
+        height:100px;
+    }
+    .box2{
+        background-color: lightcoral;
+        /* now we canapply different positon to it  */
+        /* top:20px;
+        position:relative;
+        left:100px;
+        z-index: 4;  */
+        /* This will make sure box2 is on top of box1 */
+    }
+    .box3{
+        background-color: lightblue;
+        /* position:absolute;*/ /*This find its parent which is a position element and become a position element realtive to that  */
+        top: 100px;
+        position:fixed;
+    }
+    .box4{
+        background-color: darkgray;
+    }
+    .parent{
+        margin:10px;
+        padding:10px;
+        border: 2px solid black;
+        /* position: relative;  */
+        /* This makes the parent a positioned element */
+        height: 200vh;;
+    }
+
+    </style>
+</head>
+<body>
+   
+    <div class="parent">    
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        there is a huge exception to the only position property is set the to be positioned 
+        there are transform, filter, and perspective properties that can also consider as a position element for child elements 
+    </div>
+
+</body>
+</html>

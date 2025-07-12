@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables in webpage</title>
+    <link rel="stylesheet" href="style.css"> <!-- this is a link tag used to link to a css file for styling the webpage -->
+
+</head>
+<body>
+    <!-- we can  create table in webpage using table tags  -->
+    <table> <!-- this is a table tag used to create a table in webpage -->
+        <thead>
+
+            <caption> This is my table </caption> <!-- this is a caption tag used to create a caption for the table -->
+            <tr> <!-- this is a row tag used to create a row in table -->
+                <th colspan="3"> My Table </th> <!-- this is a header tag used to create a header in table , here we are using colspan attribute to make the header span across 3 columns -->   
+                <tr> <!-- this is a row tag used to create a row in table -->
+                    <th> Name </th> <!-- this is a header tag used to create a header in table -->
+                    <th> Age </th>
+                    <th> City </th>
+                </tr>
+            </thead><!-- this is used to create a header of the table -->
+            <tbody><!-- this is used to create a body of the table -->
+                <tr>
+                    <td > Harry </td> <!-- this is a data tag used to create a data cell in table -->
+                    <td> 20 </td>
+                    <td> Delhi </td>
+                </tr>
+                <tr>
+                    <td > Kunal </td>
+                    <!-- here we  use row span to merge 2 row in a single row  -->
+                    <td rowspan="2"> 21 </td>
+                    <td rowspan="2"> Mumbai </td>
+                </tr>
+                <tr>
+                    <td > Shikha </td>
+                    
+                </tr>
+        </tbody>
+        <tfoot><!-- this is used to create a footer of the table -->
+                <tr>
+                    <td > Aman </td>
+                    <!-- here we  use row span to merge 2 row in a single row  -->
+                    <td > 21 </td>
+                    <td > Mumbai </td>
+                </tr>
+        </tfoot> <!--this is used to create a footer of the table-->
+     </table>
+
+ 
+    
+</body>
+</html>

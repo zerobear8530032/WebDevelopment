@@ -1,0 +1,52 @@
+.container {
+  height: 50vh;
+  width: 100vw;
+  background-color: palegreen;
+  border: 5px solid lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: yellowgreen;
+  border: 5px solid pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* we can also use a unit called turn */
+  /* transform: rotate(0.50turn);  360deg is 1 whole turn */
+  transform: rotate(45deg);
+  /* these allow us to rotate object in X , Y Axis */
+  /* scale allow us to increase or decrease the size on the base of given values  */
+  transform:scale(1.2);
+  transform:scale(1.2);
+}
+
+#scale{
+    transform:scale(0.5);
+}
+#rotate{
+    transform:rotate(45deg);
+    /* 
+    transform:rotate(0.3turn);
+    */
+}
+#skew{
+    transform:rotate(45deg);
+    /* transform: skewX(45deg);*/
+    /*transform: skewY(45deg); */
+    transform:skew(25deg);  
+}
+#translate{
+    /* it moves the object in X , y axis */
+    transform:translateY(100px);
+    /* transform:translateX(20px);
+    transform:translateY(20px); */
+}
+
+#multipletransform{
+    transform:scale(2) rotate(45deg) skew(20deg);
+}

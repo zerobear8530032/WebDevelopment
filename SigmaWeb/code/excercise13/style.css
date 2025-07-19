@@ -1,0 +1,78 @@
+*{
+    color:white;
+    font-family: sans-serif;
+}
+
+/* --------------containers ------------------------------------ */
+.container {
+  display: flex;
+  background-color: color(100, 100, 100, 1);
+  flex-direction: column;
+  width:100%;
+}
+/* --------------card ------------------------------------ */
+
+.card {
+  display: flex;
+  background-color: #111111; ;
+  width: 100vw;
+  height: 14vw;
+  max-height: 161px;
+  min-height: 161px;
+  margin:10px;
+  align-items: center;
+  /* justify-content: center; */
+  /* position: absolute; */
+  overflow:hidden;
+}
+
+.img {
+  display: inline-block;
+  position: relative;
+  background-image: url("images/cardthumbnail.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: center;
+  height: 80%;
+  width: 20%;
+  min-width: 250px;
+  min-height: 130px;
+  border-radius: 15px;
+  margin: 25px;
+}
+.duration {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 10;
+  bottom: 4%;
+  right: 4%;
+  padding:2px;
+  border-radius: 10px;
+}
+.title{
+font-size: 20px;
+white-space: nowrap;
+}
+
+.detail{
+    align-self: start;
+}
+
+/* ------------------------------------button ------------------- */
+.btn {
+  display: flex;
+  justify-content: center; /* ✅ this centers horizontally */
+  margin-top: 20px;
+}
+
+#add-btn {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* ✅ correct rgba syntax */
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

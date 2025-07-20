@@ -1,0 +1,30 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+
+}
+
+.cell {
+    display: flex;
+    align-items: center;   /* vertically centers content */
+    justify-content: center; /* horizontally centers content */
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 24px;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    align-items: center;   /* vertically centers content */
+    justify-content: center; /* horizontally centers content */
+    gap:25px;
+    flex-direction: column;
+}

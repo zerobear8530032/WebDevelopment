@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling Event</title>
+    <style>
+        .container{
+            height:100vh;
+            width:100vh;
+            background-color: black;
+            cursor: pointer;
+            padding:100px;
+        }
+        .childcontainer{
+            height:25vh;
+            width:25vw;
+            background-color: white;
+            padding:100px;
+        }
+        .child{
+            height:10vh;
+            width:10vw;
+            background-color: pink;
+            cursor: pointer;
+            padding:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child"></div>
+        </div>
+    </div>
+    <!-- event bubbling is a simple concept where if we activate the event at a element then its parent element will also fire that event 
+     this can also be stop using stop propogation or handle event at the parent  -->
+    <script>
+        document.querySelector(".child").addEventListener("click",(e)=>{
+            e.stopPropagation();// this will stop bubbling event to parent 
+            console.log("child was clicked");
+            alert("child was clicked");
+        })
+        document.querySelector(".childcontainer").addEventListener("click",(e)=>{
+            console.log("child contianer was clicked");
+            alert("child container was clicked");
+        })
+        document.querySelector(".container").addEventListener("click",(e)=>{
+            console.log("contianer was clicked");
+            alert("container was clicked");
+        })
+        function getRandomColor(){
+            let red= Math.floor(Math.random()*256);
+            let blue= Math.floor(Math.random()*256);
+            let green= Math.floor(Math.random()*256);
+            return `rgb(${red},${blue},${green})`;
+        }
+        //  this is used to repeat a task multiple times 
+        let interval =setInterval(() => {
+            let color= getRandomColor();
+            console.log(color);
+            document.querySelector(".child").setAttribute("style",`background-color:${color}`);
+        }, 2000);
+        // this clear interval out use to stop interval
+        clearInterval(interval);
+        // this is used to set a task for a amount of time
+        let timeout =setTimeout(() => {
+            let color= getRandomColor();
+            console.log(color);
+            document.querySelector(".child").setAttribute("style",`background-color:${color}`);
+        }, 2000);
+        clearTimeout(timeout)
+        // this clear time out use to stop interval
+        
+    </script>
+
+
+</body>
+</html>

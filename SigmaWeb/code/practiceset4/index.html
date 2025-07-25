@@ -1,0 +1,83 @@
+<!-- Q1 : create a nav bar and using js chnage its first item background color to red -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice set 4</title>
+    <style>
+        span {
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <span>Home</span>
+        <span>Contact</span>
+        <span>Service</span>
+        <span>Extra</span>
+
+    </nav>
+
+    <button onclick="changeColor()">Click me to change color</button>
+
+    <script>
+        function getRandomColor() {
+            let red = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            return `rgb(${red},${blue},${green})`;
+        }
+        function changeColor() {
+            let nav = document.querySelector("nav");
+            console.log(nav); // Optional: to verify it was selected
+            nav.children[0].style.backgroundColor = getRandomColor();
+        }
+
+    </script>
+    <!-- create a table and check tbody exists in it in view source code : yes it create a tbody iteself because of browser  -->
+    <!-- create a element with three child and change color of first and last child  -->
+    <table>
+        <tr>
+            <th> Name</th>
+            <th> Roll Number</th>
+        </tr>
+        <tr>
+            <td> zero</td>
+            <td> 101</td>
+        </tr>
+        <tr>
+            <td> zara</td>
+            <td> 102</td>
+        </tr>
+    </table>
+    <script>
+        let tablebody = document.querySelector("table").firstElementChild;
+        console.log(tablebody);
+        tablebody.firstElementChild.style.backgroundColor = getRandomColor()
+        tablebody.lastElementChild.style.backgroundColor = getRandomColor()
+    </script>
+    <!-- create  a list with some li and change all the element background a color -->
+     <ul>
+        <li>Coffee</li>
+        <li>Latte</li>
+        <li>Biscuits</li>
+        <li>cookies</li>
+     </ul>
+    <script>
+        let ul = document.querySelector("ul").children;
+        for (const li of ul) {
+            li.style.backgroundColor=getRandomColor();
+        }
+
+    </script>
+<!-- which is looks for the farthest ancestor to match the css : matches , (contains) , closests, farthest -->
+<!-- contains look from the current element to its parent elements till it reaches the most top parent or the css selector is found  -->
+
+</body>
+
+</html>

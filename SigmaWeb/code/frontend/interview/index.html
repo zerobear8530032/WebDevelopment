@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage </title>
+</head>
+<body>
+    <div class="UserData">
+
+    </div>
+
+    <script>
+        if(localStorage.getItem("userdata")){
+            let userData = localStorage.getItem("userdata");
+            let div= document.querySelector(".UserData");
+            console.log(div);
+            // here we can convert back the object form string to a object using JSON 
+            const userObj = JSON.parse(localStorage.getItem("userdata"));
+            console.log(userObj);
+            div.innerHTML=`
+            <div>User Name : ${userObj["name"]}</div>
+            <div>User Age : ${userObj["age"]}</div>
+            <div>User Profession : ${userObj["profession"]}</div>
+            ` 
+        }else{
+            let username = prompt("Enter user Name");
+            let Age  = prompt("Enter Your Age");
+            let Profession = prompt("Enter Your Profession");
+            if(username && Age && Profession){
+                const newUserData= {"name":username,"age":Age,"profession":Profession}
+                // if we store an object in the local storage it will print as [Object object]
+                // so we need to convert it to a String using a JSON.Stringfy()
+                const stringObject = JSON.stringify(newUserData);
+                localStorage.setItem("userdata",stringObject);
+                console.log("Data is Save to LocalStorage");
+            }else{
+                console.log("Some data is missing does not get stored ");
+            }
+        }
+      
+
+    </script>
+</body>
+</html>

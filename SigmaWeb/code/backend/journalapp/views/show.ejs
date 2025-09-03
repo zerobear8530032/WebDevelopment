@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- print variables  -->
+    <h1>
+        <%= variables %>
+    </h1>
+    <h1>
+        <%= arr %>
+    </h1>
+    <%- "<b>bold</b>" %> <!-- will render as bold -->
+        <%- "<div>hello</div>" %>
+            <% let isLoggedIn=false %>
+                <% if (isLoggedIn) { %>
+                    <p>Welcome, <%= "zerobear" %>!</p>
+                    <% } else { %>
+                        <p>Please log in.</p>
+                        <% } %>
+                            <ul>
+                                <%_ for(let i=0; i < 3; i++) { _%>
+                                    <li>
+                                        <%= i %>
+                                    </li>
+                                    <%_ } _%>
+                            </ul>
+</body>
+
+</html>

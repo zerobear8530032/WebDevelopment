@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/todos">Home</a>
+        <a href="/createTodo">Create Todo</a>
+    </nav>
+
+    <h1>My To-Do List</h1>
+
+    <div id="task-list">
+        <% if(todos) {%>
+            <% if(todos.length> 0) { %>
+                <% for (const todo of todos) { %>
+                    <!-- Example dynamic tasks -->
+                    <div class="task-card">
+                        <div class="task-info">
+                            <p class="task-title">
+                                <%= todo.title %>
+                            </p>
+                            <p class="task-desc">
+                                <%= todo.description %>
+                            </p>
+                        </div>
+                        <div class="buttons-container">
+                            <input type="checkbox" data-id="<%= todo.id %>" class="checkbox-btn" <%=todo.done
+                                ? "checked" : "" %> >
+                            <form action="/todos/<%= todo.id %>/delete" method="POST"> <button
+                                    class="delete-btn">Delete</button></form>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <div class="task-card">
+                                <div class="task-info">
+                                    <h2>No Todo Available Right Now</h2>
+                                </div>
+                                <a href="/createTodo">
+                                    <button class="create-btn">Create Todo</button>
+                                </a>
+                            </div>
+                            <% } %>
+                                <% } %>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll(".checkbox-btn");
+        checkboxes.forEach(checkbox => {
+            let timeout; 
+            checkbox.addEventListener("change", () => {
+                const isDone = checkbox.checked;
+                const todoId = checkbox.dataset.id;
+
+                clearTimeout(timeout);
+
+                timeout = setTimeout(async () => { 
+                    try {
+                        const response = await fetch(`/todos/${todoId}/toggle/${isDone}`, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" }
+                   
+                        });
+
+                        if (!response.ok) throw new Error("Failed to update todo");
+                    } catch (err) {
+                    
+                        checkbox.checked = !isDone;
+                        alert("Failed to update todo!");
+                        console.error(err);
+                    }
+                }, 500); // 0.3s debounce
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -27,8 +27,7 @@ app.use((req,res,next)=>{
     const logmsg = `Method : ${req.method} ,Time : ${new Date(Date.now()).toString()} , Path : ${req.path}\n`;
     fs.appendFileSync(filepath,logmsg);
     console.log("Log Done");
-    next();
-    
+    next();  
 })
 
 app.get("/",(req,res)=>{
@@ -56,13 +55,16 @@ app.get("/show",(req,res)=>{
 
 
 app.get("/pages/:pageno",(req,res)=>{
-    const pageno= Number(req.params.pageno)
-    console.log(typeof(pageno));
-    if(db.length <= (pageno-1)){
-        throw new Error("Page Number is Not Available")
-    }
-
-    res.render("page",{pagedata:db[pageno-1]});
+     const pageno = Number(req.params.pageno);
+    if (isNaN(pageno) || pageno < 1 || pageno > db.length) {
+    return res.status(404).render("error", { message: "Invalid page number" });
+  }
+  res.render("page", { pagedata: db[pageno - 1] });
+})
+app.get("/page/delete/:pageno",(req,res)=>{
+    const pageno= Number(req.params.pageno)-1
+    db.splice(pageno,1);
+    res.redirect("/");
 })
 
 app.post("/addjournal", (req, res) => {

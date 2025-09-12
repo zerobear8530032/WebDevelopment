@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Todo</title>
+  <link rel="stylesheet" href="css/form.css">
+  
+  
+</head>
+<body>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-left">
+      <a href="/todos">Home</a>
+    </div>
+    <div class="nav-right">
+      <a href="/createTodo">Create Todo</a>
+    </div>
+  </nav>
+
+  <h1>Create a Todo</h1>
+
+  <% if (success === "true") { %>
+    <div id="success-popup">
+      Todo created successfully!
+    </div>
+    <script>
+      const popup = document.querySelector("#success-popup");
+      if(popup){
+        setTimeout(() => { popup.style.display = "none"; }, 5000);
+      }
+    </script>
+  <% } %>
+
+  <form action="/submit-todo" method="POST">
+    <input type="text" name="title" placeholder="Task Title" required>
+    <textarea name="description" placeholder="Task Description" rows="4" required></textarea>
+    <button type="submit" class="create-btn">Create Todo</button>
+  </form>
+
+</body>
+</html>
